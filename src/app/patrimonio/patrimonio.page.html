@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Patrimônio</ion-title>
+    <ion-buttons slot="end" (click)="addPatrimonio()">
+      <ion-button>Novo
+        <ion-icon name="add" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header><!-- Final do cabeçalho -->
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" class="bcg">Nº:</ion-col>
+      <ion-col size="6" class="bcg">Produto:</ion-col>
+      <ion-col size="4" class="bcg">Valor: R$</ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let item of patrimonio">
+      <ion-col size="2" class="bbb">{{item.numero}}</ion-col>
+      <ion-col size="6" class="bbb">{{item.produto}}</ion-col>
+      <ion-col size="4" class="bbb">{{item.valor}}</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content><!-- Final do conteudo -->
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-title>Patrimônio</ion-title>
+  </ion-toolbar>
+</ion-footer><!-- Final do footer -->

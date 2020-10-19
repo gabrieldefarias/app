@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">Incluir Patrimônio</ion-title>
+  </ion-toolbar>
+</ion-header><!-- Final do cabeçalho -->
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Número:</ion-label>
+      <ion-input type="number" [(ngModel)]="numero"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Produto:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marca:</ion-label>
+      <ion-input type="text" [(ngModel)]="marca"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Série:</ion-label>
+      <ion-input type="text" [(ngModel)]="serie"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Categoria:</ion-label>
+      <ion-select placeholder="Selecione..." [(ngModel)]="categoria">
+        <ion-select-option value="som">Sons</ion-select-option>
+        <ion-select-option value="multimidia">Multimídia</ion-select-option>
+        <ion-select-option value="moveis">Moveis</ion-select-option>
+        <ion-select-option value="veiculos">Veículos</ion-select-option>
+        <ion-select-option value="informatica">Informática</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Valor R$:</ion-label>
+      <ion-input type="number" [(ngModel)]="valor"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Situação</ion-label>
+      <ion-input [(ngModel)]="situacao"></ion-input>
+    </ion-item>
+  </ion-list><!-- Final do formulario -->
+  <ion-button expand="block" color="success" (click)="incluir()">Incluir</ion-button>
+</ion-content><!-- Final do conteúdo -->
